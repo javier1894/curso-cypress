@@ -1,4 +1,5 @@
 import { CommonPageMethods } from "../common-page/common-page.methods";
+import { HomeElements } from "../home/home.elements";
 import { SignupElements } from "./signup.elements";
 
 export class SignupMethods {
