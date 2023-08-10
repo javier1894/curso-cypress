@@ -13,4 +13,4 @@ phases:
   post_build:
     commands:
     - aws s3 sync allure-report s3://reporte-de-pruebas-cypress/
-    - aws s3 cp --recursive --acl public-read s3://reporte-de-pruebas-cypress/ s3://reporte-de-pruebas-cypress/
+    - aws s3 cp --recursive --acl public-read s3://reporte-de-pruebas-cypress/ s3://reporte-de-pruebas-cypress/ --metadata-directive REPLACE
