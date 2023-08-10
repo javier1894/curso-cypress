@@ -40,7 +40,6 @@ describe(CommonPageData.testSuites.catalogoyCompras, () => {
 
     Logger.postCondition("Log out");
     CommonPageMethods.logout();
-    cy.wait(5000);
   });
 
   it("Agregar producto al carrito", () => {
@@ -84,9 +83,8 @@ describe(CommonPageData.testSuites.catalogoyCompras, () => {
 
     Logger.postCondition("Empty cart and logout");
     CartMethods.emptyCart(user.username, user.password);
-    cy.wait(5000);
+
     CommonPageMethods.logout();
-    cy.wait(5000);
   });
 
   it("Realizar una compra", () => {
@@ -100,7 +98,6 @@ describe(CommonPageData.testSuites.catalogoyCompras, () => {
 
     Logger.stepNumber(2);
     Logger.step("Navegar a la página de inicio");
-    cy.wait(10000);
     CommonPageMethods.clickOnHomeOption();
 
     Logger.stepNumber(3);
@@ -156,7 +153,6 @@ describe(CommonPageData.testSuites.catalogoyCompras, () => {
       "Verificar que se muestra un mensaje de confirmación y se redirige al usuario a la página de inicio"
     );
     ThankYouForYourPurchaseMethods.verifyGreenCheckMarkIsDisplayed();
-    cy.wait(10000);
     ThankYouForYourPurchaseMethods.clickOnOkButton();
     HomeMethods.verifyHomePageIsShow();
 
